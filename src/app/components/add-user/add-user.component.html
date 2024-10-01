@@ -1,0 +1,31 @@
+<!-- These inputs can also be used with Reactive forms - using formControlName  -->
+<p>Full Name</p>
+<input type="text" pInputText [(ngModel)]="fullname" />
+
+<hr>
+<br>
+
+<p>City</p>
+<p-dropdown 
+    [options]="cities" 
+    [(ngModel)]="selectedCity" 
+    optionLabel="name" 
+    optionValue="code"
+    placeholder="Select a City" />
+
+<hr>
+<br>
+
+<p>Bio</p>
+<textarea 
+    rows="5"
+    cols="30" 
+    pInputTextarea 
+    [(ngModel)]="bio">
+</textarea>
+
+
+
+ <p>{{ fullname }}</p>   
+ <p>{{ selectedCity }}</p>   
+ <p>{{ bio }}</p>   
